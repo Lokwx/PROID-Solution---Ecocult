@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
@@ -231,7 +231,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        MondayPoints += 20;
+                        MondayPoints += 40;
                     }
                     else
                     {
@@ -242,7 +242,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        MondayPoints += 10;
+                        MondayPoints += 20;
                     }
                 }
 
@@ -276,7 +276,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        TuesdayPoints += 20;
+                        TuesdayPoints += 40;
                     }
                     else
                     {
@@ -287,7 +287,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        TuesdayPoints += 10;
+                        TuesdayPoints += 20;
                     }
                 }
 
@@ -321,7 +321,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        WednesdayPoints += 20;
+                        WednesdayPoints += 40;
                     }
                     else
                     {
@@ -332,7 +332,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        WednesdayPoints += 10;
+                        WednesdayPoints += 20;
                     }
                 }
 
@@ -367,7 +367,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        ThursdayPoints += 20;
+                        ThursdayPoints += 40;
                     }
                     else
                     {
@@ -378,7 +378,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        ThursdayPoints += 10;
+                        ThursdayPoints += 20;
                     }
                 }
 
@@ -413,7 +413,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        FridayPoints += 20;
+                        FridayPoints += 40;
                     }
                     else
                     {
@@ -424,7 +424,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        FridayPoints += 10;
+                        FridayPoints += 20;
                     }
                 }
 
@@ -459,7 +459,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        SaturdayPoints += 20;
+                        SaturdayPoints += 40;
                     }
                     else
                     {
@@ -470,7 +470,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        SaturdayPoints += 10;
+                        SaturdayPoints += 20;
                     }
                 }
 
@@ -505,7 +505,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        SundayPoints += 20;
+                        SundayPoints += 40;
                     }
                     else
                     {
@@ -516,7 +516,7 @@ namespace PROID_3
                 {
                     if (Scanned == "Yes")
                     {
-                        SundayPoints += 10;
+                        SundayPoints += 20;
                     }
                 }
 
@@ -534,7 +534,7 @@ namespace PROID_3
                 Console.Clear();
 
                 //Breakdown of points for the week
-                Console.WriteLine("+-----------------------------------------------------------------------------------------------------------+\r\n|                                                   Points                                                  |\r\n+-------------------------------+-----------------------------------+---------------------------------------+\r\n| Conditions                    | The day is a selected grocery day | The day is not a selected grocery day |\r\n+-------------------------------+-----------------------------------+---------------------------------------+\r\n| Did not opt for a plastic bag | 20                                | 10                                    |\r\n+-------------------------------+-----------------------------------+---------------------------------------+\r\n| Opted for a plastic bag       | -20                               | 0                                     |\r\n+-------------------------------+-----------------------------------+---------------------------------------+\n");
+                Console.WriteLine("+-----------------------------------------------------------------------------------------------------------+\r\n|                                                   Points                                                  |\r\n+-------------------------------+-----------------------------------+---------------------------------------+\r\n| Conditions                    | The day is a selected grocery day | The day is not a selected grocery day |\r\n+-------------------------------+-----------------------------------+---------------------------------------+\r\n| Did not opt for a plastic bag | 40                                | 20                                    |\r\n+-------------------------------+-----------------------------------+---------------------------------------+\r\n| Opted for a plastic bag       | -20                               | 0                                     |\r\n+-------------------------------+-----------------------------------+---------------------------------------+\n");
 
                 Console.WriteLine("\nThese are the days that you have selected: " + SelectedDays);
                 Console.WriteLine("These are the days you did not take a plastic bag: " + NoPlasticDays + "\n");
@@ -566,9 +566,9 @@ namespace PROID_3
                 Console.WriteLine("Total points: " + TotalPoints.ToString() + "\n");
 
                 //Voucher redemption if accumulated points is sufficient
-                if (TotalPoints >= 100)
+                if (TotalPoints >= 300)
                 {
-                    if ((TotalPoints / 100) > 1)
+                    if ((TotalPoints / 300) > 1)
                     {
                         Console.WriteLine("You have enough points to exchange " + TotalPoints / 100 + " vouchers");
                     }
@@ -586,7 +586,7 @@ namespace PROID_3
                     {
                         Console.WriteLine("Invalid Input!\n");
 
-                        if ((TotalPoints / 100) > 1)
+                        if ((TotalPoints / 300) > 1)
                         {
                             Console.WriteLine("You have enough points to exchange " + TotalPoints / 100 + " vouchers");
                         }
@@ -604,7 +604,7 @@ namespace PROID_3
                 //Exchange of vouchers
                 if (ExchangePoints == "Yes")
                 {
-                    if ((TotalPoints / 100) > 1)
+                    if ((TotalPoints / 300) > 1)
                     {
                         Console.WriteLine("You have enough points to exchange " + TotalPoints / 100 + " vouchers");
                     }
@@ -625,7 +625,7 @@ namespace PROID_3
 
                         Console.WriteLine("Invalid Input!");
 
-                        if ((TotalPoints / 100) > 1)
+                        if ((TotalPoints / 300) > 1)
                         {
                             Console.WriteLine("You have enough points to exchange " + TotalPoints / 100 + " vouchers");
                         }
@@ -660,7 +660,7 @@ namespace PROID_3
 
                     Console.Clear();
 
-                    TotalPoints -= NumberOfVouchers * 100;
+                    TotalPoints -= NumberOfVouchers * 300;
 
                     if (NumberOfVouchers > 1)
                     {
